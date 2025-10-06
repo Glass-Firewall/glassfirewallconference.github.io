@@ -4,9 +4,6 @@ theme: just-the-docs
 
 url: https://glassfirewallconference.com
 
-aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
-
 # Logo in browser tab
 favicon_ico: "/assets/images/GlassFirewallLogo.png"
 
