@@ -1,18 +1,59 @@
-title: Glass Firewall Conference
-description: Breaking barriers. Building connections. Elevating the next generation of cybersecurity leaders.
-theme: just-the-docs
-
-url: https://glassfirewallconference.com
-
-# Logo in browser tab
-favicon_ico: "/assets/images/GlassFirewallLogo.png"
-
-# Ow, my eyes!!
-color_scheme: dark
-
-# Enable or disable the side/mobile menu globally
-nav_enabled: true
+#-------------------------------
+# General Site Settings
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://glassfirewallconference" # the base hostname & protocol for your site, e.g. http://example.com
 
 
-# Logo on home page
-logo: "/assets/images/GlassFirewallTitle.png"
+#-------------------------------
+# Build Settings
+markdown: kramdown
+permalink: /:title
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+paginate: 6
+paginate_path: "/page/:num"
+
+
+#-------------------------------
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /blog/:slug
+  projects:
+    output: true
+    permalink: /project/:slug
+  past-years:
+    output: true
+    permalink: /previous-years/:year
+
+# Pages Path
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+sass:
+  sass_dir: _sass
+  style: compressed
