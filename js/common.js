@@ -1,57 +1,67 @@
 document.addEventListener("DOMContentLoaded", function() {
   'use strict';
 
-  var html = document.querySelector('html'),
-    body = document.querySelector("body"),
+  var body = document.querySelector("body"),
     menuToggle = document.querySelector(".hamburger"),
     menuList = document.querySelector(".main-nav"),
-    toggleTheme = document.querySelector(".toggle-theme-js"),
-    toggleTheme = document.querySelector(".toggle-theme"),
+    dropdownToggles = document.querySelectorAll(".dropdown-toggle"),
     btnScrollToTop = document.querySelector(".top");
 
 
   /* =======================================================
-  // Menu + Theme Switcher
+  // Menu
   ======================================================= */
-  menuToggle.addEventListener("click", () => {
-    menu();
-  });
+  if (menuToggle && menuList) {
+    menuToggle.addEventListener("click", () => {
+      menu();
+    });
+  }
 
   function menuOpen() {
     menuList.classList.add("is-open");
+    menuList.classList.add("is-visible");
+    menuToggle.classList.add("is-open");
+    menuToggle.setAttribute("aria-expanded", "true");
+    menuToggle.setAttribute("aria-label", "Close menu");
   }
 
   function menuClose() {
     menuList.classList.remove("is-open");
+    menuList.classList.remove("is-visible");
+    menuToggle.classList.remove("is-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open menu");
   }
 
-  if (toggleTheme) {
-    toggleTheme.addEventListener("click", () => {
-      darkMode();
-    });
-  };
-
-
-  // Menu
   function menu() {
-    menuToggle.classList.toggle("is-open");
-    menuList.classList.toggle("is-visible");
-  }
-
-
-  // Theme Switcher
-  function darkMode() {
-    if (html.classList.contains('dark-mode')) {
-      html.classList.remove('dark-mode');
-      localStorage.removeItem("theme");
-      document.documentElement.removeAttribute("dark");
+    if (menuList.classList.contains("is-visible")) {
+      menuClose();
     } else {
-      html.classList.add('dark-mode');
-      localStorage.setItem("theme", "dark");
-      document.documentElement.setAttribute("dark", "");
+      menuOpen();
     }
   }
 
+  dropdownToggles.forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const dropdown = toggle.closest(".dropdown");
+      const isOpen = dropdown.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      dropdownToggles.forEach((toggle) => {
+        toggle.closest(".dropdown").classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+
+      if (menuList && menuList.classList.contains("is-visible")) {
+        menuClose();
+        menuToggle.focus();
+      }
+    }
+  });
 
   /* =======================
   // Animation Load Page
@@ -62,26 +72,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   /* ================================================================
-  // Stop Animations During Window Resizing and Switching Theme Modes
+  // Stop Animations During Window Resizing
   ================================================================ */
   let disableTransition;
 
-  if (toggleTheme) {
-    toggleTheme.addEventListener("click", () => {
-      stopAnimation();
-    });
+  window.addEventListener("resize", () => {
+    stopAnimation();
+  });
 
-    window.addEventListener("resize", () => {
-      stopAnimation();
-    });
-
-    function stopAnimation() {
-      document.body.classList.add("disable-animation");
-      clearTimeout(disableTransition);
-      disableTransition = setTimeout(() => {
-        document.body.classList.remove("disable-animation");
-      }, 100);
-    }
+  function stopAnimation() {
+    document.body.classList.add("disable-animation");
+    clearTimeout(disableTransition);
+    disableTransition = setTimeout(() => {
+      document.body.classList.remove("disable-animation");
+    }, 100);
   }
 
 

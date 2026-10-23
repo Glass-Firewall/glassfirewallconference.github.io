@@ -3,9 +3,8 @@
 
     <div class="logo-footer">
       <a class="logo-footer__link" href="{{ site.baseurl }}/">
-        {% if site.data.settings.logo or site.data.settings.logo_dark %}
+        {% if site.data.settings.logo %}
         <img class="logo-footer__image" src="{{ site.baseurl }}{{ site.data.settings.logo }}" alt="{{ site.data.settings.title }}">
-        <img class="logo-footer__image__dark" src="{{ site.baseurl }}{{ site.data.settings.logo_dark }}" alt="{{ site.data.settings.title }}">
         {% else %}
           {{ site.data.settings.title }}
         {% endif %}

@@ -30,7 +30,6 @@
     }
   }
 }
-
 .tag-container {
   display: flex;
   align-items: center;
@@ -87,11 +86,5 @@
       line-height: 1;
       color: var(--text-alt-color);
     }
-  }
-}
-
-.dark-mode {
-  .tag-container {
-    background: var(--background-alt-color);
   }
 }
