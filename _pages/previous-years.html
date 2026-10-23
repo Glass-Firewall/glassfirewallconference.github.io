@@ -1,0 +1,22 @@
+---
+layout: page
+title: Conference Years
+permalink: /previous-years/
+description: See where Glass Firewall has been held, what each program covered, and photos from past events.
+---
+
+Each Glass Firewall conference includes technical lessons, career conversations, and time to meet other people in cybersecurity. From the first event in San Francisco to later gatherings in new cities, the community has grown while keeping the same welcoming, beginner-friendly spirit. Choose a year to see the location, program, and event photos.
+
+<div class="year-grid">
+{% assign conference_years = site.past-years | sort: "conference_year" | reverse %}
+{% for conference in conference_years %}
+  <a class="year-card" href="{{ conference.url | relative_url }}">
+    <span class="year-card__year">{{ conference.conference_year }}</span>
+    <h2>{{ conference.archive_title }}</h2>
+    <p>{{ conference.description }}</p>
+    <span class="year-card__location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ conference.location }}</span>
+  </a>
+{% endfor %}
+</div>
+
+Some attendees open a security tool for the first time at Glass Firewall. Others have worked in the field for years. Both are welcome.

@@ -1,14 +1,41 @@
 /* Header */
 .header {
-  padding: 32px 0;
+  padding: 24px 0 32px;
   margin-bottom: 64px;
 
   .header__inner {
     position: relative;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    padding: 12px 18px;
+    border: 1px solid rgba(115, 139, 186, 0.2);
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(239, 245, 255, 0.88));
+    box-shadow: 0 12px 28px -22px rgba(38, 59, 85, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    overflow: visible;
+  }
+
+  .header__inner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(rgba(101, 136, 208, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(101, 136, 208, 0.08) 1px, transparent 1px),
+      radial-gradient(circle at center, rgba(66, 160, 255, 0.08), transparent 52%);
+    background-size: 22px 22px, 22px 22px, 100% 100%;
+    opacity: 0.8;
+    pointer-events: none;
+  }
+
+  .logo,
+  .main-nav,
+  .social-nav {
+    position: relative;
+    z-index: 1;
   }
 
   @media (max-width: $desktop) {
@@ -57,20 +84,25 @@
 .main-nav {
   display: flex;
   align-items: center;
+  padding: 6px 12px;
+  border: 1px solid rgba(118, 151, 206, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.32);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
 
   @media (max-width: $desktop) {
     position: absolute;
-    top: 48px;
+    top: 62px;
     right: $base-spacing-unit;
     z-index: -1;
     display: block;
-    min-width: 160px;
+    min-width: 180px;
     padding: 20px 24px;
     border-radius: 16px;
     transform: translate3d(0, -12px, 0);
     opacity: 0;
     visibility: hidden;
-    background-color: var(--background-color);
+    background: linear-gradient(180deg, rgba(10, 18, 28, 0.96), rgba(16, 27, 40, 0.92));
     box-shadow: 0 8px 40px -8px rgba(0, 0, 0, .20);
     transition: all .2s ease;
 
@@ -182,10 +214,13 @@
 
     .nav__link {
       position: relative;
-      padding: 12px 0;
-      font-size: 16px;
+      padding: 10px 12px;
+      font-size: 15px;
       line-height: 1;
       font-weight: 700;
+      letter-spacing: 0.02em;
+      border-radius: 999px;
+      transition: all .2s ease;
 
       &::before {
         content: "";
@@ -199,10 +234,13 @@
         visibility: hidden;
         transition: all .2s;
         border-radius: 50%;
-        background-color: var(--text-alt-color);
+        background-color: var(--primary-color);
       }
 
       &:hover {
+        background: rgba(114, 168, 255, 0.1);
+        box-shadow: inset 0 0 0 1px rgba(114, 168, 255, 0.10);
+
         &::before {
           opacity: 1;
           visibility: visible;
@@ -210,6 +248,9 @@
       }
 
       &.active-link {
+        background: linear-gradient(135deg, rgba(111, 200, 255, 0.18), rgba(95, 138, 255, 0.08));
+        box-shadow: inset 0 0 0 1px rgba(103, 162, 255, 0.14);
+
         &::before {
           opacity: 1;
           visibility: visible;
@@ -251,7 +292,7 @@
     left: -32px;
     transform: translate3d(0, -12px, 0);
     backface-visibility: hidden;
-    z-index: 100;
+    z-index: 300;
     min-width: 150px;
     display: block;
     padding: 20px;

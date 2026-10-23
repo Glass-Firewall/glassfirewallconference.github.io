@@ -3,7 +3,7 @@
 title: Glass Firewall
 logo: "/images/GlassFirewallTitle.png" # You can add own logo. For example "/images/logo.svg".
 #logo_dark: "/images/logo-dark.svg"
-description: Breaking barriers. Building connections. Elevating the next generation of cybersecurity leaders.
+description: A free, hands-on cybersecurity conference for women who want to learn, practice, and connect.
 color_scheme: auto # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the users can choose the light or dark mode themself.
 
 
@@ -18,38 +18,37 @@ menu_settings:
   menu_items:
     - title: "Home"
       url: "/"
-    - title: "About"
-      url: "/about/"
-    - title: "Blog"
-      url: "/blog/"
-    - title: "Previous Years"
+    - title: "Attend"
+      url: "/attend/"
+    - title: "Learn"
+      url: "/start-here/"
+    - title: "Years"
       url: "/previous-years/"
       submenu:
-      - url: "/GFC-2024/"
+      - url: "/previous-years/2027/"
+        title: "2027"
+      - url: "/previous-years/2026/"
+        title: "2026"
+      - url: "/previous-years/2025/"
+        title: "2025"
+      - url: "/previous-years/2024/"
         title: "2024"
-      - url: "/GFC-2023/"
+      - url: "/previous-years/2023/"
         title: "2023"
-    - title: "Sponsorships"
+    - title: "Get involved"
+      url: "/get-involved/"
+    - title: "Partners"
       url: "/sponsorships/"
-    - title: "Photos"
-      url: "/photos/"
-      submenu:
-      - url: "/2024/"
-        title: "2024"
-      - url: "/2023/"
-        title: "2023"
-    - title: "More"
-      submenu:
-      - url: "/contact/"
-        title: "Contact"
+    - title: "About"
+      url: "/about/"
+    - title: "Contact"
+      url: "/contact/"
 
 
 #-------------------------------
 # Social Settings
 social:
-- {icon: "fa-brands fa-twitter", link: "https://twitter.com"}
-- {icon: "fa-brands fa-facebook", link: "https://facebook.com"}
-- {icon: "fa-brands fa-pinterest", link: "https://pinterest.com"}
+- {icon: "x", label: "Follow Glass Firewall on X", link: "https://x.com/GlassFirewall"}
 
 # Example of adding a new link to the header and footer - {icon: "fa-brands fa-youtube", link: "https://youtube.com"}
 # Other icons can be found at https://fontawesome.com/icons
@@ -60,44 +59,15 @@ social:
 hero:
   enable: true
   hero_title: Glass Firewall - Breaking Bytes and Barriers # Add the "span" tag to highlight text.
-  hero_description: The Glass Firewall Conference aims to change the cybersecurity realm by providing an inclusive, welcoming environment where women can explore ethical hacking without fear of judgment or intimidation.
+  hero_description: A free conference for women exploring ethical hacking, cybersecurity careers, and hands-on learning in a welcoming community.
   hero_button_contact: Get Involved
+  hero_button_contact_url: /get-involved/
   hero_button_about: About Glass Firewall
 
 
 #-------------------------------
 # Projects Settings
 section_projects_title: 👨🏻‍💻 Articles and Blog Posts
-
-
-#-------------------------------
-# Testimonials Section
-#section_testimonial_title: 🙂 What Clients Say
-
-#testimonial_items:
-#  - name: "Carla Kenter"
-#    image: "/images/client-1.jpg"
-#    designation: "Professional Artist"
-#    link: "https://twitter.com/"
-#    content : "Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus"
-#
-#  - name: "Kierra Botosh"
-#    image: "/images/client-2.jpg"
-#    designation: "Growth & Community"
-#    link: "https://facebook.com/"
-#    content : "Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus"
-#
-#  - name: "Randy Herwitz"
-#    image: "/images/client-3.jpg"
-#    designation: "Executive Assistant"
-#    link: "https://twitter.com/"
-#    content : "Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus"
-#
-#  - name: "Hanna Franci"
-#    image: "/images/client-4.jpg"
-#    designation: "Product Designer"
-#    link: "https://twitter.com/"
-#    content : "Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus"
 
 
 #-------------------------------
@@ -111,18 +81,8 @@ section_tags_title: ✌️ Explore Topics
 
 
 #-------------------------------
-# Newsletter Settings
-mailchimp_settings:
-  enable: true
-  mailchimp_title: Get interesting news
-  mailchimp_identifier: frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3 # Add your MailChimp form identifier. For example - frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3
-  mailchimp_input_text: Enter your email address
-  mailchimp_background_image: /images/subscribe-bg.jpg
-
-
-#-------------------------------
 # Footer Settings
-footer_description: Glass Firewall Conference 
+footer_description: A free, hands-on cybersecurity conference for women.
 
 
 #-------------------------------
@@ -131,17 +91,18 @@ footer_menu_settings:
   menu_items:
     - title: "Home"
       url: "/"
+    - title: "Attend"
+      url: "/attend/"
+    - title: "Learn"
+      url: "/start-here/"
+    - title: "Get involved"
+      url: "/get-involved/"
+    - title: "Partners"
+      url: "/sponsorships/"
     - title: "About"
       url: "/about/"
-    - url: "/blog/"
-      title: "Blog"
-    - title: "Previous Years"
+    - title: "Years"
       url: "/previous-years/"
-    - title: "Sponsorships"
-      url: "/sponsorships/"
-    - title: "Photos"
-      url: "/photos/"
-    - title: "Pages"
     - url: "/contact/"
       title: "Contact"
 
@@ -149,8 +110,8 @@ footer_menu_settings:
 #-------------------------------
 # Contact Settings
 contact:
-  email: plutonianfern@github.com # Add your form_id
-  description: Contact us for any inquiries or feedback.
+  email: hello@glassfirewallconference.com
+  description: Have a question about the conference, volunteering, or sponsorship? Send us a note.
 
 # NOTE
 # Simpler theme comes with a contact form built-in. You can use this form with Formspree (https://formspree.io/) service and get up to 50 submissions for free. Also, you can easily switch to another service if you want.

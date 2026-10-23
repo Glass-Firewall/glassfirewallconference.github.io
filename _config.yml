@@ -1,7 +1,7 @@
 #-------------------------------
 # General Site Settings
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://glassfirewallconference" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://glassfirewallconference.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 #-------------------------------
@@ -53,6 +53,11 @@ defaults:
       type: "projects"
     values:
       layout: "project"
+  - scope:
+      path: ""
+      type: "past-years"
+    values:
+      layout: "conference-year"
 
 sass:
   sass_dir: _sass

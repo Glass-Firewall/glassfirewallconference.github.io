@@ -5,45 +5,40 @@ permalink: /about/
 image: '/images/GlassFirewallLogo.png'
 ---
 
-Despite progress, women continue to be an underrepresented group in cyber and offensive security. Glass Firewall is a free event designed to inspire, educate, and empower women interested in security research and cybersecurity. By creating an accessible, inclusive space, the Glass Firewall Conference is helping to lower barriers and build a more substantial pipeline of women in cybersecurity.
+Women are still underrepresented in cybersecurity, especially in offensive security. Glass Firewall exists to change that. We are a free conference for women who want to learn about security research, ethical hacking, and careers in the field without needing to already feel like an expert.
 
+We want the first step into cybersecurity to feel possible, practical, and welcoming.
 
+### How we started
 
-### How We Started
-
-The idea for Glass Firewall took root during conversations between women leaders at GitHub, Capital One, HackerOne, and Salesforce, realizing the lack of women security researchers and engineers in security programs. 
+Glass Firewall grew out of conversations among women leaders at GitHub, Capital One, HackerOne, and Salesforce. They kept seeing the same problem: too few women were participating as security researchers and engineers.
 
 > There is a perceived high barrier to entry into the ethical hacking community, and with so many accomplished and public security researchers, it can seem inaccessible and daunting. We aim to show women that anyone with any background can learn to hack, and by providing them with the foundations, we're empowering them to get started.
 >
 > <cite>- Kathryn Torelli, Co-Founder</cite>
 
-Many of us involved in live hacking events don’t see many women participating. We broke down the communications and general participation in our  bug bounty programs and realized that women are underrepresented in the pool of researchers. We changed the conversation to, “How do we fix that?”
+At live hacking events and in bug bounty programs, women were often missing from the room. The question became simple: “How do we fix that?”
 
-As women in this space, we realized the following to be true:
+We saw a few common barriers:
 
-* There’s a perceived high barrier to entry, leaving women to feel they need to be an expert to participate or be taken seriously.
-* Many women won’t apply for a job if they don’t believe they’re 100% qualified.
-* The industry doesn't take as much time as it should to make the community more inviting.
+* Ethical hacking can look like a field where you must already be an expert to participate.
+* Many women will not apply for a role unless they feel fully qualified.
+* Security communities do not always make enough effort to welcome newcomers.
 
-We spent the summer of 2023 planning content and inviting speakers to create a program that could break down some of these barriers. Our goals for the Glass Firewall Conference are to:
+The team spent the summer of 2023 planning the first conference and inviting speakers. The goals were straightforward:
 
-* Create an inviting and safe space
-* Focus on new and different career options in cybersecurity
-* Provide content that can serve as a person’s first walk-through or as a refresher
-* Share industry experience from various levels
-* Lead an activity to put the skills to use
-
-
-
+* Create a safe, inviting place to learn
+* Introduce different cybersecurity careers
+* Offer material that works for beginners and as a refresher
+* Share experience from people at different career levels
+* Give attendees a chance to practice what they learn
 
 ![2023]({{site.baseurl}}/images/2023/IMG_0345.jpg)
 
+### What we do
 
+Glass Firewall gives women a place to explore ethical hacking without being judged for what they do not know yet.
 
-### What We do
+Each event includes technical talks, workshops, panels, and hands-on challenges. Attendees can try security tools, ask questions, hear how other people entered the field, and meet peers who are learning too.
 
-We at Glass Firewall aim to provide an inclusive, welcoming environment where women can explore ethical hacking without fear of judgment or intimidation.
-
-Our events offer a dynamic lineup of workshops, panel discussions, and hands-on challenges to make ethical hacking and cybersecurity more accessible. The goal? To equip women with the skills, knowledge, and confidence to explore opportunities in offensive security and beyond. 
-
-Whether you’re looking to sharpen your technical skills, learn from experienced security professionals, or build meaningful connections, Glass Firewall is your chance to be part of a movement that’s reshaping the future of security through inclusion and innovation. Look to our previous years or blog posts to learn more, or look out for notifications for our next event!
+Whether you are exploring cybersecurity for the first time or looking for a community that understands your path, Glass Firewall is designed to help you take the next step with confidence.

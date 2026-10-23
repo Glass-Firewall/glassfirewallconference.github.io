@@ -292,19 +292,11 @@
       color: var(--white);
     }
 
-    &.share__facebook {
-      background: #3b5998;
+    &.share__x {
+      background: #000;
 
       &:hover {
-        background: darken(#3b5998, 8%);
-      }
-    }
-
-    &.share__twitter {
-      background: #55acee;
-
-      &:hover {
-        background: darken(#55acee, 8%);
+        background: #333;
       }
     }
 
@@ -316,13 +308,6 @@
       }
     }
 
-    &.share__pinterest {
-      background: #bd081c;
-
-      &:hover {
-        background: darken(#bd081c, 8%);
-      }
-    }
   }
 }
 

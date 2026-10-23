@@ -1,0 +1,84 @@
+---
+layout: resource-page
+title: "Partners & Sponsors"
+permalink: /sponsorships/
+eyebrow: "Support the conference"
+description: "Partners help us keep Glass Firewall free, run hands-on workshops, and bring the conference to new cities."
+quick_links:
+  - label: "Past collaborators"
+    anchor: "partners"
+  - label: "Sponsor impact"
+    anchor: "sponsor-impact"
+  - label: "Become a partner"
+    anchor: "become-a-partner"
+---
+
+<div class="callout-panel">
+  <i class="fa-solid fa-unlock-keyhole" aria-hidden="true"></i>
+  <div>
+    <h2>Help keep Glass Firewall free</h2>
+    <p>Partner support can cover the venue, food, workshop equipment, accessibility needs, and other costs that would otherwise fall on attendees. It helps make sure the event remains open to women who want to learn without worrying about the cost of participation.</p>
+  </div>
+</div>
+
+<section id="partners">
+  <div class="resource-section-intro">
+    <span class="section-eyebrow">Our conference community</span>
+    <h2>Organizations that have helped</h2>
+    <p>These organizations have worked with Glass Firewall in one or more conference years. Their roles have varied by event.</p>
+  </div>
+
+  <div class="partner-group">
+    <span class="partner-card__meta">Conference collaborators</span>
+    <h3>Building and supporting the event</h3>
+    <div class="partner-grid">
+      {% for partner in site.data.partners.conference_collaborators %}
+      <div class="partner-card"><h4>{{ partner.name }}</h4><p>{{ partner.description }}</p></div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="partner-group">
+    <span class="partner-card__meta">Community supporters</span>
+    <h3>Sharing the event with their communities</h3>
+    <div class="partner-grid">
+      {% for partner in site.data.partners.community_supporters %}
+      <div class="partner-card"><h4>{{ partner.name }}</h4><p>{{ partner.description }}</p></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="sponsor-impact">
+  <div class="resource-section-intro">
+    <span class="section-eyebrow">Where support can go</span>
+    <h2>What sponsorship can cover</h2>
+    <p>Every event has different needs. We can talk through what would be most useful for the conference year you want to support.</p>
+  </div>
+
+  <div class="support-grid">
+    <div class="support-card"><h3>Attendance costs</h3><p>Help cover the venue, meals, accessibility services, or attendee travel.</p></div>
+    <div class="support-card"><h3>Hands-on learning</h3><p>Provide hardware kits, software access, lab infrastructure, devices, or other workshop materials.</p></div>
+    <div class="support-card"><h3>Speakers and mentors</h3><p>Support speaker travel, preparation, and materials.</p></div>
+    <div class="support-card"><h3>Event resources</h3><p>Help record sessions, publish materials, and organize follow-up resources.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="resource-section-intro">
+    <span class="section-eyebrow">More than funding</span>
+    <h2>Other ways organizations can contribute</h2>
+  </div>
+  <div class="support-grid">
+    <div class="support-card"><h3>Host</h3><p>Offer an accessible venue, reliable connectivity, workshop rooms, or operational support in a future city.</p></div>
+    <div class="support-card"><h3>Teach</h3><p>Invite practitioners who can teach a clear session for beginners.</p></div>
+    <div class="support-card"><h3>Recruit volunteers</h3><p>Encourage employees or members to mentor, facilitate labs, welcome attendees, or support logistics.</p></div>
+    <div class="support-card"><h3>Share the event</h3><p>Tell schools, nonprofits, student groups, and professional networks about the conference.</p></div>
+  </div>
+</section>
+
+<section id="become-a-partner" class="resource-cta">
+  <h2>Interested in partnering?</h2>
+  <p>Tell us about your organization, what you can offer, which year or city you are interested in, and who we should contact.</p>
+  <a class="button" href="{{ '/contact/' | relative_url }}">Contact the organizing team <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+</section>

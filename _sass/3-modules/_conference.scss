@@ -1,0 +1,247 @@
+/* Conference archive */
+.section-eyebrow,
+.conference-kicker {
+  display: block;
+  margin: 0 0 10px;
+  color: var(--primary-color);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.conference-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+  gap: 48px;
+  align-items: center;
+  margin: 0 auto 72px;
+
+  h1 {
+    margin: 0 0 16px;
+    font-size: 56px;
+  }
+
+  &__description {
+    margin: 0 0 28px;
+    font-size: 21px;
+    color: var(--text-alt-color);
+  }
+
+  &__image {
+    position: relative;
+    min-height: 480px;
+    overflow: hidden;
+    border-radius: $global-radius;
+    background: var(--background-alt-color);
+
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media (max-width: $desktop) {
+    grid-template-columns: 1fr;
+
+    &__image {
+      min-height: 420px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    gap: 32px;
+    margin-bottom: 52px;
+
+    h1 {
+      font-size: 40px;
+    }
+
+    &__description {
+      font-size: 18px;
+    }
+
+    &__image {
+      min-height: 300px;
+    }
+  }
+}
+
+.conference-status {
+  display: inline-block;
+  margin-bottom: 24px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--heading-font-color);
+  background: var(--accent-color);
+}
+
+.conference-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0 0 30px;
+
+  div {
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color);
+  }
+
+  dt {
+    margin-bottom: 3px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-alt-color);
+  }
+
+  dd {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.45;
+    color: var(--heading-font-color);
+  }
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.conference-page {
+  max-width: 1000px;
+  margin: 0 auto 80px;
+}
+
+.conference-page__content {
+  max-width: 780px;
+  margin-bottom: 72px;
+
+  h2 {
+    margin-top: 48px;
+  }
+
+  a {
+    font-weight: 700;
+    border-bottom: 1px solid var(--border-color);
+  }
+}
+
+.conference-block {
+  margin: 72px 0;
+
+  > h2 {
+    margin: 0 0 28px;
+    font-size: 38px;
+  }
+}
+
+.highlight-grid,
+.year-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.highlight-card,
+.year-card {
+  padding: 28px;
+  border: 1px solid var(--border-color);
+  border-radius: $global-radius;
+  background: var(--background-alt-color);
+
+  i {
+    margin-bottom: 18px;
+    color: var(--primary-color);
+    font-size: 24px;
+  }
+
+  h3 {
+    margin: 0 0 8px;
+  }
+
+  p {
+    margin: 0;
+    color: var(--text-alt-color);
+  }
+}
+
+.conference-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+
+  figure {
+    position: relative;
+    min-height: 300px;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    background: var(--background-alt-color);
+  }
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.year-navigation {
+  padding-top: 28px;
+  border-top: 1px solid var(--border-color);
+
+  a {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+.year-grid {
+  margin: 36px 0 64px;
+}
+
+.year-card {
+  display: flex;
+  min-height: 260px;
+  flex-direction: column;
+  transition: $global-transition;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary-color);
+  }
+
+  &__year {
+    margin-bottom: 30px;
+    font-family: $heading-font-family;
+    font-size: 52px;
+    line-height: 1;
+    color: var(--primary-color);
+  }
+
+  &__location {
+    margin-top: auto;
+    padding-top: 24px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--heading-font-color);
+  }
+}

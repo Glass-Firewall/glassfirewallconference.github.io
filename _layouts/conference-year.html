@@ -1,0 +1,81 @@
+---
+layout: default
+---
+
+<div class="container">
+  <header class="conference-head">
+    <div class="conference-head__copy">
+      <span class="conference-status">{{ page.status }}</span>
+      <p class="conference-kicker">Glass Firewall {{ page.conference_year }}</p>
+      <h1>{{ page.title }}</h1>
+      <p class="conference-head__description">{{ page.description }}</p>
+
+      <dl class="conference-facts">
+        <div>
+          <dt>Date</dt>
+          <dd>{{ page.event_date }}</dd>
+        </div>
+        <div>
+          <dt>Location</dt>
+          <dd>{{ page.location }}</dd>
+        </div>
+        <div>
+          <dt>Format</dt>
+          <dd>{{ page.format }}</dd>
+        </div>
+      </dl>
+
+      {% if page.primary_link %}
+      <a class="button" href="{{ page.primary_link }}">{{ page.primary_link_label }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      {% endif %}
+    </div>
+
+    {% if page.image %}
+    <div class="conference-head__image">
+      <img class="lazy" data-src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.image_alt | default: page.title }}">
+    </div>
+    {% endif %}
+  </header>
+</div>
+
+<div class="container">
+  <article class="conference-page">
+    <div class="conference-page__content">
+      {{ content }}
+    </div>
+
+    {% if page.highlights %}
+    <section class="conference-block" aria-labelledby="highlights-{{ page.conference_year }}">
+      <span class="section-eyebrow">What participants explored</span>
+      <h2 id="highlights-{{ page.conference_year }}">Program highlights</h2>
+      <div class="highlight-grid">
+        {% for highlight in page.highlights %}
+        <div class="highlight-card">
+          <i class="{{ highlight.icon }}" aria-hidden="true"></i>
+          <h3>{{ highlight.title }}</h3>
+          <p>{{ highlight.description }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if page.gallery %}
+    <section class="conference-block" aria-labelledby="photos-{{ page.conference_year }}">
+      <span class="section-eyebrow">Inside the conference</span>
+      <h2 id="photos-{{ page.conference_year }}">Photos from {{ page.conference_year }}</h2>
+      <div class="conference-gallery">
+        {% for photo in page.gallery %}
+        <figure>
+          <img class="lazy" data-src="{{ site.baseurl }}{{ photo.src }}" alt="{{ photo.alt }}">
+        </figure>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <nav class="year-navigation" aria-label="Conference years">
+      <a href="{{ site.baseurl }}/previous-years/">View all conference years</a>
+    </nav>
+  </article>
+</div>

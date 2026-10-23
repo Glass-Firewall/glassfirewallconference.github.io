@@ -49,7 +49,9 @@
           <ul class="social__list list-reset">
             {% for social in site.data.settings.social %}
             <li class="social__item">
-              <a class="social__link" href="{{social.link}}" target="_blank" rel="noopener" aria-label="Social link"><i class="{{social.icon}}"></i></a>
+              <a class="social__link" href="{{social.link}}" target="_blank" rel="noopener" aria-label="{{ social.label | default: 'Social link' }}">
+                {% if social.icon == "x" %}{% include icon-x.html %}{% else %}<i class="{{social.icon}}"></i>{% endif %}
+              </a>
             </li>
             {% endfor %}
           </ul>
