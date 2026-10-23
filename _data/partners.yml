@@ -1,0 +1,24 @@
+# This list describes organizations publicly associated with one or more
+# Glass Firewall conference years. Update the descriptions and categories as
+# relationships evolve.
+conference_collaborators:
+  - name: "Capital One"
+    description: "A founding collaborator that has supported security education and career access."
+  - name: "GitHub"
+    description: "A founding collaborator that has connected attendees with application security and bug bounty practitioners."
+  - name: "GitLab"
+    description: "A conference collaborator that has supported programming and career conversations."
+  - name: "HackerOne"
+    description: "A founding collaborator that has supported the event and its ethical hacking community."
+  - name: "Salesforce"
+    description: "A conference collaborator that has helped the event reach more people."
+
+community_supporters:
+  - name: "Black Girls Hack"
+    description: "Connected the first conference with learners and security professionals in its community."
+  - name: "Women in CyberSecurity (WiCyS)"
+    description: "Shared the first event and its learning opportunities with women in cybersecurity."
+  - name: "Women’s Society of Cyberjutsu"
+    description: "Supported community outreach for the inaugural Glass Firewall Conference."
+  - name: "Women in Security and Privacy (WISP)"
+    description: "Helped with outreach and participation for the first event."

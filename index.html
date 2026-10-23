@@ -1,14 +1,31 @@
 ---
 layout: default
-image: '/images/01.jpg'
+image: '/images/2026/IMG_0113.jpg'
 ---
 
 {% include section-hero.html %}
-<!--
+
+<section class="homepage-banner">
+  <div class="container">
+    <div class="homepage-banner__inner">
+      <div>
+        <span class="section-eyebrow">For women in cybersecurity</span>
+        <h2>Cybersecurity learning that feels possible from day one</h2>
+      </div>
+      <p>Glass Firewall is a free conference for women who want to explore ethical hacking, build practical security skills, and meet people who are learning alongside them.</p>
+      <div class="homepage-banner__actions">
+        <a class="button" href="{{ '/attend/' | relative_url }}">Plan your visit <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="button button--secondary" href="{{ '/start-here/' | relative_url }}">Get started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% comment %}
 {% include section-projects.html %}
-
 {% include section-testimonials.html %}
--->
+{% if site.posts.size > 0 %}
 {% include section-blog.html %}
-
+{% endif %}
 {% include section-tags.html %}
+{% endcomment %}

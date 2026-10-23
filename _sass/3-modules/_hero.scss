@@ -47,10 +47,16 @@
     line-height: 1;
     font-weight: 400;
     color: var(--heading-font-color);
+    background: linear-gradient(135deg, #9fe8ff 0%, #6ee7d8 18%, #7daaf8 42%, #d7f0ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 28px rgba(120, 175, 255, 0.18);
   
     span {
-      background: var(--text-gradient);
+      background: linear-gradient(135deg, #9fe8ff 0%, #7daaf8 32%, #d7f0ff 100%);
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
   }

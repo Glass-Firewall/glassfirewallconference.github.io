@@ -2,6 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.data.settings.title }}{% endif %}</title>
   <meta name='description' content='{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.data.settings.description }}{% endif %}'>
@@ -28,23 +29,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
 
   <script>
-    {% if site.data.settings.color_scheme == "auto" %}
-    if (localStorage.getItem("theme") === "dark") {
-      document.documentElement.setAttribute("dark", "");
-      document.documentElement.classList.add('dark-mode');
-    }
-    {% elsif site.data.settings.color_scheme == "light" %}
-      document.documentElement.setAttribute("light", "");
-      document.documentElement.classList.add('light-mode');
-    {% elsif site.data.settings.color_scheme == "dark" %}
-      document.documentElement.setAttribute("dark", "");
-      document.documentElement.classList.add('dark-mode');
-    {% else %}
-    if (localStorage.getItem("theme") === "dark") {
-      document.documentElement.setAttribute("dark", "");
-      document.documentElement.classList.add('dark-mode');
-    }
-    {% endif %}
+    localStorage.removeItem("theme");
+    document.documentElement.removeAttribute("dark");
+    document.documentElement.classList.remove("dark-mode");
+    document.documentElement.setAttribute("light", "");
+    document.documentElement.classList.add("light-mode");
   </script>
 
   <style>
